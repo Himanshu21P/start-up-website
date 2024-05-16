@@ -10,19 +10,28 @@
        height:  360px;
       width:  100%;
         object-fit: cover;
-      }
+        margin-bottom: 16px;      }
     </style>
    </head>
   <body>
-    <div class="container">
-  <h1 class= "text-center mt-2 mb-4">START_UPS</h1>
+    {% include 'nav.html' %}
     <img class="img-fluid" id= "banner" src="https://039ce8c8-1c11-4ffe-b6bc-e80cce343f48-00-33ix04hwdj4jm.pike.replit.dev/static/banner.jpg"
       height="320">
-    <h2 class="text-center mt-2 mb-4">About Start_Up</h2>
+    <div class="container">
+  <h1 class= "text-center mt-2 mb-4">START_UPS</h1>
+      
+      
+      <div class="row" style="margin-bottom:16px">
+        <div class="col-md-6">
     <p class="text-center",class="lead">
       A startup is a young company founded by one or more entrepreneurs to develop a unique product or service and bring it to market. Startups are characterized by their innovative nature, often leveraging new technologies or business models to disrupt existing industries or create entirely new ones. They typically operate in a fast-paced and dynamic environment, seeking rapid growth and scalability. Startups often face challenges such as securing funding, building a customer base, and establishing their brand in the market.
     </p>
-    <h2 class="text-center mt-2 mb-4">open positions</h2>
+        </div>
+        <div class="d-none d-md-block col-6">
+        <img src="/static/people.jpg" style="height 320px;border-radius:4px;">
+        </div>
+      </div>
+    <h2 class="text-center mt-2 mb-4">OPEN POSITIONS</h2>
       <div>
     
       {% for job in jobs %}
@@ -30,9 +39,10 @@
       {% endfor %}
     
       <div class="text-center">
-    <button class="btn btn-primary btn-lg">contact us</button>
-        <p class="mt-4">Copy Right 2024,Start_Up</p>
+    <a class="btn btn-primary btn-lg"
+      href="mailto:crescendo_career.mi?subject=Questions%20about%20job%20openning&body=My%20Name%3A%3CYour%20Name%3E%0D%0AMy%20Question%3A%3CYour%20Question%3E%0D%0A">contact us</a>
       </div>
     </div>
+      {% include 'footer.html' %}
   </body>
 </html>
